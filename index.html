@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>World Clock PatagonIA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Botón decorativo para arrastrar la ventana y controles -->
+  <div class="title-bar">
+    <div class="drag-region">Reloj Mundial</div>
+    <div class="controls">
+      <button id="pinBtn" title="Siempre visible">📌</button>
+      <button id="closeBtn" title="Cerrar">✕</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tabs-container">
+      <button class="tab-btn active" data-tab="tab-clocks">Relojes</button>
+      <button class="tab-btn" data-tab="tab-timers">Temporizadores</button>
+      <button class="tab-btn" data-tab="tab-calc">Calculadora</button>
+    </div>
+
+    <!-- Pestaña Relojes -->
+    <div id="tab-clocks" class="tab-content active">
+      <div class="add-zone-container">
+        <div class="search-wrapper">
+          <input type="text" id="zoneSearch" placeholder="🔍 Buscar ciudad o país (ej. Colombia, Los Ángeles)..." autocomplete="off">
+          <div id="searchResults" class="search-results hidden"></div>
+        </div>
+      </div>
+
+      <div id="clock-list">
+        <!-- Los relojes se inyectarán aquí por JavaScript -->
+      </div>
+
+    </div>
+
+    <!-- Pestaña Temporizadores -->
+    <div id="tab-timers" class="tab-content">
+      <!-- Sección del Temporizador (Pomodoro) -->
+      <div class="pomodoro-container">
+        <div class="pomodoro-header">Temporizador de Enfoque</div>
+        <div id="pomodoro-display">25:00</div>
+        <div class="pomodoro-controls">
+          <input type="number" id="pomodoro-input" value="25" min="1" max="120" title="Minutos">
+          <span class="min-label">min</span>
+          <button id="pomodoro-start">▶ Iniciar</button>
+          <button id="pomodoro-reset">⏹ Reiniciar</button>
+        </div>
+      </div>
+
+      <!-- Sección de Temporizadores Guardados (Presets) -->
+      <div class="presets-container">
+        <div class="presets-header">Temporizadores Personalizados</div>
+        
+        <div class="add-preset-form">
+          <input type="text" id="preset-name" placeholder="Ej: Saludos a clientes" class="glass-input">
+          <input type="number" id="preset-time" placeholder="Min" min="1" max="120" class="glass-input preset-time-input">
+          <button id="add-preset-btn" class="glass-btn" title="Guardar temporizador">➕ Guardar</button>
+        </div>
+
+        <div id="presets-list" class="presets-grid">
+          <!-- Los presets se inyectarán aquí por JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Pestaña Calculadora -->
+    <div id="tab-calc" class="tab-content">
+      <div class="calculator-card">
+        <div class="calc-header">Conversor Horario</div>
+        <div class="calc-body">
+          <div class="calc-col">
+            <label>Hora Origen</label>
+            <select id="calc-source-tz" class="glass-input"></select>
+            <input type="time" id="calc-source-time" class="glass-input time-input">
+          </div>
+          
+          <div class="calc-center">
+            <button id="calc-swap-btn" class="swap-btn" title="Intercambiar zonas">&#8644;</button>
+          </div>
+          
+          <div class="calc-col">
+            <label>A Destino</label>
+            <select id="calc-dest-tz" class="glass-input"></select>
+            <div id="calc-result-time" class="calc-result">--:--</div>
+            <div id="calc-diff-label" class="calc-diff">Diferencia: --</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="resize-handle" id="resizeHandle" title="Arrastrar para cambiar el tamaño">
+    <svg viewBox="0 0 24 24" width="16" height="16" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="21 15 21 21 15 21"></polyline>
+      <line x1="21" y1="21" x2="15" y2="15"></line>
+    </svg>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

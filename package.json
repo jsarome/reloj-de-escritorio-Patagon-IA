@@ -1,0 +1,36 @@
+{
+  "name": "reloj-de-escritorio",
+  "version": "1.0.0",
+  "description": "World Clock Patagonia",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.agencia.reloj",
+    "productName": "Reloj de Escritorio",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "icon": "build/icon.png",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^41.0.0",
+    "electron-builder": "^25.0.0-alpha.5"
+  }
+}
