@@ -23,7 +23,16 @@
       "oneClick": true,
       "perMachine": false,
       "allowToChangeInstallationDirectory": false
-    }
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "renderer.js",
+      "preload.js",
+      "style.css",
+      "build/icon.png",
+      "package.json"
+    ]
   },
   "keywords": [],
   "author": "",
