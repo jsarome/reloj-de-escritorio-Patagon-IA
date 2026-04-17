@@ -16,7 +16,7 @@
 ## 🚀 Cómo Usar el Programa (Comunidad Skoll)
 
 Si solo querés usar el programa:
-1.  Descargá la última versión desde la sección de [Releases](https://github.com/TU_USUARIO/reloj-de-escritorio/releases).
+1.  Descargá la última versión desde la sección de [Releases](https://github.com/jsarome/reloj-de-escritorio-Patagon-IA/releases).
 2.  Ejecutá el archivo `Reloj de Escritorio Setup.exe`.
 3.  ¡Listo! Ya tenés tu reloj en el escritorio.
 
@@ -45,7 +45,7 @@ npm run dist
 ```
 
 ## 📜 Licencia
-Este proyecto fue desarrollado con ❤️ para la comunidad de **Skoll**. Licenciado bajo ISC.
+Licenciado bajo ISC.
 
 ---
-*Desarrollado por [Tu Nombre/Agencia]*
+*Desarrollado por Juan Saromé - desde PatagonIA - Argentina
